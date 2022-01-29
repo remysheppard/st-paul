@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "head.html" }}
+  </head>
+  <body class="my-10">
+
+    {{ partial "header.html" }}
+
+    <div class="container px-4 lg:mx-auto">
+      {{ block "main" . }}{{ end }}
+    </div>
+  </body>
+</html>

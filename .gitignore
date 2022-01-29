@@ -3,5 +3,5 @@ package-lock.json
 node_modules/
 public/
 resources/
-static/main.css
+assets/main.css
 .hugo_build.lock

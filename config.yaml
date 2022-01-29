@@ -1,0 +1,31 @@
+baseURL: https://www.stpaulchenoa.org
+title: St. Paul Ev. Lutheran Church
+
+params:
+  description: St. Paul Evangelical Lutheran Church of Chenoa Illinois
+
+menu:
+  main:
+  - identifier: home
+    name: Home
+    pre: <i class="fa-solid fa-house-day" name="house-icon"></i>
+    url: /
+    weight: 1
+
+  - identifier: about
+    name: About
+    pre: <i class="fa-solid fa-rocket-launch"></i>
+    url: "#about"
+    weight: 2
+
+  - identifier: portfolio
+    name: Portfolio
+    pre: <i class="fa-solid fa-display-code"></i>
+    url: /#portfolio
+    weight: 3
+
+  - identifier: contact
+    name: Contact
+    pre: <i class="fa-solid fa-comment-arrow-up-right"></i>
+    url: /
+    weight: 4
