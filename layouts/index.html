@@ -2,21 +2,112 @@
 
   {{ $header := (resources.Get "images/church-front.jpg").Resize "1600x webp q75" }}
 
-<div class="relative">
-  <div class="w-full sm:px-6 lg:px-8">
-    <div class="absolute inset-0">
-      <img class="h-full w-full object-cover" src="{{ $header.RelPermalink }}">
-      <div class="absolute inset-0 bg-sky-900 mix-blend-multiply"></div>
-    </div>
-    <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-      <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-        <span class="block text-white drop-shadow">St. Paul Ev. Lutheran Church</span>
-        <span class="block text-red-300">Chenoa, Illinois</span>
-      </h1>
-      <p class="mt-6 max-w-lg mx-auto text-center text-white italic sm:max-w-3xl">
-        A Member of the Lutheran Church — Missouri Synod
-      </p>
+  <div class="relative">
+    <div class="w-full sm:px-6 lg:px-8">
+      <div class="absolute inset-0">
+        <img class="h-full w-full object-cover" src="{{ $header.RelPermalink }}">
+        <div class="absolute inset-0 bg-sky-900 mix-blend-multiply"></div>
+      </div>
+      <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+        <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="block text-white drop-shadow">St. Paul Ev. Lutheran Church</span>
+          <span class="block text-sky-200">Chenoa, Illinois</span>
+        </h1>
+        <p class="mt-6 max-w-lg mx-auto text-center text-white italic sm:max-w-3xl">
+          A Member of the Lutheran Church — Missouri Synod
+        </p>
+      </div>
     </div>
   </div>
-</div>
+
+  <div class="bg-gray-50 pt-12 sm:pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold text-sky-900 sm:text-4xl">
+          We hope to see you this Sunday!
+        </h2>
+        <p class="mt-3 text-xl text-gray-500 sm:mt-4">
+          We have the Divine Service & Bible Study every Sunday,<br> with Sunday School running from May to September.
+        </p>
+      </div>
+    </div>
+    <div class="mt-10 pb-12 bg-white sm:pb-16">
+      <div class="relative">
+        <div class="absolute inset-0 h-1/2 bg-gray-50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto">
+            <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-2">
+              <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+                  Sunday School & Bible Study
+                </dt>
+                <dd class="order-1 text-5xl font-extrabold text-sky-600">
+                  9 am 
+                </dd>
+              </div>
+              <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+                  Divine Service
+                </dt>
+                <dd class="order-1 text-5xl font-extrabold text-sky-600">
+                  10 am
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ $pastor := (resources.Get "images/family.jpg").Resize "500x webp q75" }}
+  <div class="bg-white overflow-hidden">
+    <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
+        <div>
+          <h2 class="text-base text-sky-600 font-semibold tracking-wide uppercase">Meet our pastor</h2>
+          <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-sky-700 sm:text-4xl">Rev. Jeremy Latzke</h3>
+        </div>
+      </div>
+      <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+        <div class="relative lg:row-start-1 lg:col-start-2">
+          <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
+            <figure>
+              <img class="rounded-lg shadow" src="{{ $pastor.RelPermalink }}" width="1184" height="1376">
+              <figcaption class="mt-3 flex text-sm text-gray-500">
+                <i class="fa-light fa-camera fa-fw fa-lg"></i>
+                <span class="ml-2">Rev. Jeremy Latzke & his family</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="mt-8 lg:mt-0">
+          <div class="text-base max-w-prose mx-auto lg:max-w-none">
+            <p class="text-lg text-sky-900">Jeremy grew up in Indiana and is a huge baseball fan. He's also probably the most handsome guy that our web developer has ever seen. And look at his beautiful family!</p>
+          </div>
+          <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+            
+            <p>Pastor Latzke most likely went to a school in the Concordia system, where he - statistically - he received an M.Div. He is now an ordained minister</p>
+
+            <p>This goofy, completely fake about section will remain in place until Jeremy can email me over an actual bio.</p>
+
+            <p>But seriously, have you seen a cooler looking guy? What a King.</p>
+
+            <h3 class="text-sky-600">Our Mission</h3>
+
+            <p>The purpose of this congregation shall be to give honor and glory to God, to carry out His will, to assist in preaching the Gospel of Jesus Christ to all the world, to manifest the unity of our faith in Jesus Christ as God and Savior, to foster Christian fellowship and love, to extend a helping hand in human need, and to achieve our objectives by the preaching of the Word of God, by the administration of the sacraments and by the religious instruction of all its members according to the confessional standard of the Evangelical Lutheran Church.</p>
+
+            <h3 class="text-sky-600">Confessional Standard</h3>
+
+            <p class="font-bold text-sky-800">The congregation accepts without reservation:</p>
+
+            <p>The Scriptures of the Old and New Testament as the written Word of God and the only rule and norm of faith and of practice.</p>
+
+            <p>All the Symbolical Books of the Evangelical Lutheran Church as a true and unadulterated statement and exposition of the Word of God, to wit: the three Ecumenical Creeds (the Apostles’ Creed, the Nicene Creed, the Athanasian Creed), the Unaltered Augsburg Confession the Apology of the Augsburg Confession, the Smalcald Articles, the Large Catechism of Luther, the Small Catechism of Luther, and the Formula of Concord.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {{ end }}

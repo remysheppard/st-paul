@@ -21,3 +21,14 @@ menu:
   - name: Contact
     url: /contact/
     weight: 4
+
+  social:
+  - name: Facebook
+    pre: <i class="fa-brands fa-facebook"></i>
+    url: https://www.facebook.com/stpaulchenoa/
+    weight: 1
+
+  - name: YouTube
+    pre: <i class="fa-brands fa-youtube"></i>
+    url: https://www.youtube.com/channel/UCzVEAM5iyYBCMmrROt_0uPg
+    weight: 2

@@ -3,11 +3,13 @@
   <head>
     {{ partial "head.html" }}
   </head>
-  <body class="my-10">
+  <body class="relative">
 
     {{ partial "header.html" }}
 
     {{ block "main" . }}{{ end }}
+
+    {{ partial "footer.html" }}
 
   </body>
 </html>

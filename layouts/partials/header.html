@@ -1,17 +1,39 @@
 {{ $logo := (resources.Get "images/logo.png").Resize "140x webp q75" }}
-<header class="text-gray-600 body-font sticky shadow">
+<header class="bg-gray-50 body-font sticky top-0 z-50 shadow" x-data="{ isOpen: false }">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
       <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" height="{{ div $logo.Height 2 }}" width="{{ div $logo.Width 2 }}">
-      <span class="ml-3 text-xl">{{ site.Title }}</span>
+      <span class="ml-3 text-xl text-sky-900">{{ site.Title }}</span>
     </a>
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      {{ range site.Menus.main }}
-        <a href="{{ .URL }}" class="mr-5 hover:text-gray-900 hover:bg-red-300 hover:text-red-700 hover:shadow transition-all duration-300 rounded px-4 py-1">{{ .Name }}</a>
-      {{ end }}
+
+    <button id="menu-toggle" onclick="toggleMenu()" class="bg-sky-200 md:hidden px-2 py-1 rounded shadow text-sky-800" aria-label="Mobile Menu Toggle">
+      <i class="fa-light fa-bars"></i>
+    </button>
+
+    <nav id="nav" class="md:ml-auto md:mr-auto hidden md:flex flex-col md:flex-row justify-between items-center text-base md:justify-center">
+
+        {{ range site.Menus.main }}
+          <a href="{{ .URL }}" class="md:mr-5 my-5 md:my-0 bg-sky-200 hover:bg-sky-300 text-sky-800 hover:shadow transition-all duration-300 rounded px-4 py-1 text-lg">
+            {{ .Name }}
+          </a>
+        {{ end }}
+
     </nav>
-    <button class="inline-flex items-center bg-blue-100 border-0 py-4 px-10 focus:outline-none hover:bg-blue-200 rounded text-base mt-4 md:mt-0 text-blue-800 text-lg font-bold">Give Online&nbsp;&nbsp; 
+
+    <button class="inline-flex items-center bg-blue-100 border-0 py-4 px-10 focus:outline-none hover:bg-blue-200 rounded text-base mt-4 md:mt-0 text-sky-800 text-lg font-bold">Give Online&nbsp;&nbsp; 
       <i class="fa-light fa-hands-holding-heart fa-fw fa-lg"></i>
     </button>
   </div>
 </header>
+
+<script type="text/javascript">
+  const toggle = document.getElementById('menu-toggle')
+  const nav = document.getElementById('nav')
+
+  function toggleMenu() {
+    nav.classList.toggle('hidden')
+    nav.classList.toggle('flex')
+    toggle.classList.toggle('fa-bars')
+    toggle.classList.toggle('fa-x')
+  }
+</script>
