@@ -14,9 +14,9 @@ menu:
     url: /news
     weight: 2
 
-  - name: Calendar
-    url: /calendar/
-    weight: 3
+#  - name: Calendar
+#    url: /calendar/
+#    weight: 3
 
   - name: Contact
     url: /contact/

@@ -1,0 +1,95 @@
+{{ define "main" }}
+
+  <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div class="relative bg-white shadow-xl rounded">
+      <h2 class="sr-only">Contact us</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3">
+        <div class="relative overflow-hidden py-10 px-6 bg-sky-700 sm:px-10 xl:p-12 rounded-l ">
+          <h3 class="text-lg font-medium text-white">Contact information</h3>
+          <span class="mt-6 text-base text-sky-50 max-w-3xl">{{ .Content }}</span>
+          <dl class="mt-8 space-y-6">
+            <dt><span class="sr-only">Phone number</span></dt>
+            <dd class="flex text-base text-sky-50">
+              <i class="fa-light fa-phone-rotary fa-fw fa-lg"></i>
+              <a href="tel:+18159455331" class="ml-3">(815) 945-5331</a>
+            </dd>
+            <dt><span class="sr-only">Office Email</span></dt>
+            <dd class="flex text-base text-sky-50">
+              <i class="fa-light fa-envelope fa-fw fa-lg"></i>
+              <a href="mailto:stpaul@stpaulchenoa.org" class="ml-3">stpaul@stpaulchenoa.org</a>
+            </dd>
+            <dt><span class="sr-only">Pastor's Email</span></dt>
+            <dd class="flex text-base text-sky-50">
+              <i class="fa-light fa-envelope fa-fw fa-lg"></i>
+              <a href="mailto:revlatzke@gmail.com" class="ml-3">revlatzke@gmail.com</a>
+            </dd>
+            <dt><span class="sr-only">Address</span></dt>
+            <dd class="flex text-base text-sky-50">
+              <i class="fa-light fa-map-location-dot fa-fw fa-lg"></i>
+              <span class="ml-3">405 Emma Street<br>Chenoa, Illinois 61726</span> 
+          </dl>
+        </div>
+
+        <!-- Contact form -->
+        <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+          <h3 class="text-lg font-medium text-gray-900">Send us a message</h3>
+          <form action="#" netlify method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+            <div>
+              <label for="first-name" class="block text-sm font-medium text-gray-900">First name</label>
+              <div class="mt-1">
+                <input type="text" name="first-name" id="first-name" required autocomplete="given-name" class="border-2 border-gray-300 py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-sky-500 focus:border-sky-500 rounded-md">
+              </div>
+            </div>
+            <div>
+              <label for="last-name" class="block text-sm font-medium text-gray-900">Last name</label>
+              <div class="mt-1">
+                <input type="text" name="last-name" id="last-name" required autocomplete="family-name" class="border-2 py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-sky-500 focus:border-sky-500 border-gray-300 rounded-md">
+              </div>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
+              <div class="mt-1">
+                <input id="email" name="email" type="email" autocomplete="email" class="border-2 py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-sky-500 focus:border-sky-500 border-gray-300 rounded-md">
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between">
+                <label for="phone" class="block text-sm font-medium text-gray-900">Phone</label>
+                <span id="phone-optional" class="text-sm text-gray-500">Optional</span>
+              </div>
+              <div class="mt-1">
+                <input type="text" name="phone" id="phone" autocomplete="tel" class="border-2 py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-sky-500 focus:border-sky-500 border-gray-300 rounded-md" aria-describedby="phone-optional">
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="subject" class="block text-sm font-medium text-gray-900">Subject</label>
+              <div class="mt-1">
+                <input type="text" name="subject" required id="subject" class="border-2 py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-sky-500 focus:border-sky-500 border-gray-300 rounded-md">
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <div class="flex justify-between">
+                <label for="message" class="block text-sm font-medium text-gray-900">Message</label>
+                <span id="message-max" class="text-sm text-gray-500">Max. 500 characters</span>
+              </div>
+              <div class="mt-1">
+                <textarea id="message" name="message" rows="4" class="border-2 py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-sky-500 focus:border-sky-500 border border-gray-300 rounded-md" aria-describedby="message-max"></textarea>
+              </div>
+            </div>
+            <div class="sm:col-span-2 sm:flex sm:justify-end">
+              <button type="submit" class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 sm:w-auto">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://goo.gl/maps/n716WGaCGm64VfQm6" target="_blank" class="shadow-md">
+    <img src="{{ ((resources.Get "images/map.png").Resize "1600x webp q85").RelPermalink }}" class="w-2/3 m-auto rounded-md shadow-lg">
+  </a>
+
+{{ end }}
