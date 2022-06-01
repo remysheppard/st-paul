@@ -1,0 +1,25 @@
+{{ $original := resources.GetMatch (printf "images/*%s*" (.Get 0)) }}
+{{ $command := .Get 1 }}
+{{ $options := .Get 2 }}
+{{ $class := .Get 3 }}
+{{ if eq $command "Fit"}}
+{{ .Scratch.Set "image" ($original.Fit $options) }}
+{{ else if eq $command "Resize"}}
+{{ .Scratch.Set "image" ($original.Resize $options) }}
+{{ else if eq $command "Fill"}}
+{{ .Scratch.Set "image" ($original.Fill $options) }}
+{{ else }}
+{{ errorf "Invalid image processing command: Must be one of Fit, Fill or Resize."}}
+{{ end }}
+{{ $image := .Scratch.Get "image" }}
+{{ $fullsize := $original }}
+
+<h2>This Month's Calendar</h2>
+<figure>
+	<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" class="{{ $class }}">
+		<figcaption>
+			<small>
+				<a href="{{ $fullsize.RelPermalink }}" download>Download this calendar</a>
+			</small>
+		</figcaption>
+</figure>  

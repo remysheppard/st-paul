@@ -11,6 +11,10 @@
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         {{ .Content }}
+
+        {{ with .Params.docFile }}
+          <a href="/newsletters/{{ . }}" class="font-bold font-lg text-center" download>Download this newsletter</a>
+        {{ end }}
       </div>
     </div>
   </div>

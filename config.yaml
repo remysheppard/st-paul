@@ -1,5 +1,6 @@
 baseURL: https://st-paul-chenoa.netlify.app
 title: St. Paul Ev. Lutheran Church
+buildFuture: true
 
 params:
   description: St. Paul Evangelical Lutheran Church of Chenoa Illinois
