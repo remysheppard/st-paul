@@ -1,0 +1,5 @@
+<script type="text/javascript">
+	{{ range first 1 (where site.RegularPages "Type" "eq" "news") }}
+		window.location.replace('{{ .Permalink }}');
+	{{ end }}
+</script>
