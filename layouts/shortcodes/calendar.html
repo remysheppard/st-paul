@@ -16,10 +16,12 @@
 
 <h2>This Month's Calendar</h2>
 <figure>
-	<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" class="{{ $class }}">
-		<figcaption>
-			<small>
-				<a href="{{ $fullsize.RelPermalink }}" download>Download this calendar</a>
-			</small>
-		</figcaption>
+	<a href="{{ $fullsize.RelPermalink }}" download>
+		<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" class="{{ $class }}">
+	</a>
+	<figcaption>
+		<small>
+			<i class="fa-regular fa-calendar-arrow-down"></i>&nbsp;<a href="{{ $fullsize.RelPermalink }}" download>Download this calendar</a>
+		</small>
+	</figcaption>
 </figure>  

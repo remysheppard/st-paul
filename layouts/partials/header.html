@@ -1,7 +1,7 @@
 {{ $logo := (resources.Get "images/logo.png").Resize "140x webp q75" }}
 <header class="bg-gray-50 body-font sticky top-0 z-50 shadow" x-data="{ isOpen: false }">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+    <a href="{{ site.BaseURL }}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
       <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" height="{{ div $logo.Height 2 }}" width="{{ div $logo.Width 2 }}">
       <span class="ml-3 text-xl text-sky-900">{{ site.Title }}</span>
     </a>
